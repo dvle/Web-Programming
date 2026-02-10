@@ -1,0 +1,22 @@
+* {
+	font-family: "Georgia", serif;
+	box-sizing: border-box;
+}
+
+body {
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+	background-color: #3EB489;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: grey;
+	color: white;
+}
