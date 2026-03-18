@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do List (Portfolio Version)</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <main class="app">
+            <header class="header">
+                <h1>To-Do List</h1>
+                <p class="subtitle">DOM • Events • Validation • localStorage</p>
+            </header>
+
+            <div class="search">
+                <input 
+                    id="searchInput" 
+                    type="text"
+                    placeholder="Search Tasks" 
+                    aria-label="Search tasks"
+                />
+            </div>
+
+            <form id="taskForm" class="task-form">
+                <input
+                    id="taskInput"
+                    type="text"
+                    placeholder="Add a task…"
+                    autocomplete="off"
+                    aria-label="Task input"
+                />
+                <button id='addBtn' type="submit" class="btn primary">Add</button>
+            </form>
+
+            <p id="charCounter">Characters: 0</p>
+            <p id="errorMessage" class="error" aria-live="polite"></p>
+
+            <section class="controls">
+                <div class="counts" aria-label="Task counts">
+                    <span id="totalCount">Total: 0</span>
+                    <span id="doneCount">Completed: 0</span>
+                </div>
+                
+                <div class="filters" aria-label="Filters">
+                    <button type="button" class="btn ghost active" data-filter="all">All</button>
+                    <button type="button" class="btn ghost" data-filter="active">Active</button>
+                    <button type="button" class="btn ghost" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="actions" aria-label="Actions">
+                    <button type="button" id="clearCompleted" class="btn danger">Clear Completed</button>
+                    <button type="button" id="clearAll" class="btn danger">Clear All</button>
+                </div>
+            </section>
+
+            <p id="emptyMessage">No tasks available.</p>
+
+            <ul id="taskList" class="task-list" aria-label="Task list"></ul>
+
+            <footer class="footer">
+            Tip: Click a task to toggle done. Use Delete to remove it.
+            </footer>
+
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
