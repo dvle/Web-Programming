@@ -14,16 +14,15 @@ header {
 }
 
 h2, h3, h4, p {
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .navbar{
-    display: flex;
+    display: block;
     background-color: #a8dcab;
     justify-content: center;
-    padding: 10px;
+    padding: 10px 5px;
 	color: #c3d6e8;
-    margin: 0 auto;
     font-size: 20px;
 }
 
@@ -36,7 +35,8 @@ h2, h3, h4, p {
 
 .nav-list {
     display: flex;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     padding: 0;
 }
@@ -49,39 +49,111 @@ a:hover {
     color: #000;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     width: 90%;
-    height: min-content;
     border: .6px solid #a8dcab;
     padding: 10px;
     margin: 10px auto;
     border-radius: 8px;
 }
 
-.aboutme {
-    list-style: none;
-    text-align: left;
-    padding: 20px 10px;
+.row_content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.contact p {
+.text {
+    flex: 1;
+}
+
+.features {
+    list-style: none;
     text-align: left;
-    font-size: 14px;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+.contact {
+    list-style: none;
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.readmore {
+    padding: 10px 10px;
+    color: #FA9BCF;
+    text-align: left;
+}
+
+.email {
+    color: #FA9BCF;
+}
+
+.img_box {
+    background-color: #000;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.img_box_clear {
+    background-color: transparent;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.image {
+    display: flex;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.qr-box {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    margin-top: auto;
+}
+
+.qr {
+    display: flex;
+    width: 1in;
+    height: 1in;
 }
 
 footer {
-	display: block;
-	padding: .5%;
-	text-align: center;
+	display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+	padding: 5px;
 	background: #a8dcab;
 	color: #fff;
 }
 
 footer p, footer a {
+    display: flex;
 	text-decoration: none;
 	color: #fff;
-	font-size: 1em;
+	font-size: 16px;
+    text-align: center;
 }
